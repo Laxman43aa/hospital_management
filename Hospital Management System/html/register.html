@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hospital Management - Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/register.css" >
+    <script src="/script/register.js"></script>
+
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/html/index.html" class="logo">
+                <i class="fas fa-hospital"></i> Hospital Management
+            </a>
+            <ul class="nav-links">
+                <li><a href="/html/index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="#"><i class="fas fa-procedures"></i> Services</a></li>
+                <li><a href="#"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                <li><a href="/html/login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Registration Container -->
+    <div class="registration-container">
+        <div class="registration-box">
+            <div class="registration-header">
+                <h2>Create Your Account</h2>
+                <p>Select your role and fill out the registration form</p>
+            </div>
+
+            <!-- Role Selection Tabs -->
+            <div class="role-selection">
+                <div class="role-tabs">
+                    <div class="role-tab active" data-tab="patient">
+                        <i class="fas fa-user-injured"></i> Patient
+                    </div>
+                    <div class="role-tab" data-tab="doctor">
+                        <i class="fas fa-user-md"></i> Doctor
+                    </div>
+                    <div class="role-tab" data-tab="admin">
+                        <i class="fas fa-user-shield"></i> Administrator
+                    </div>
+                </div>
+            </div>
+
+            <!-- Patient Registration Form -->
+            <form id="patientForm" class="form-section patient-form active">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pFirstName">First Name</label>
+                        <input type="text" id="pFirstName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pLastName">Last Name</label>
+                        <input type="text" id="pLastName" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pEmail">Email Address</label>
+                    <input type="email" id="pEmail" class="form-control" required>
+                    <i class="fas fa-envelope input-icon"></i>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pPassword">Password</label>
+                        <input type="password" id="pPassword" class="form-control" required>
+                        <i class="fas fa-lock input-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="pConfirmPassword">Confirm Password</label>
+                        <input type="password" id="pConfirmPassword" class="form-control" required>
+                        <i class="fas fa-lock input-icon"></i>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pDob">Date of Birth</label>
+                        <input type="date" id="pDob" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pGender">Gender</label>
+                        <select id="pGender" class="form-control" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pPhone">Phone Number</label>
+                    <input type="tel" id="pPhone" class="form-control" required>
+                    <i class="fas fa-phone input-icon"></i>
+                </div>
+
+                <div class="form-group">
+                    <label for="pAddress">Address</label>
+                    <input type="text" id="pAddress" class="form-control" required>
+                </div>
+
+                <div class="insurance-group">
+                    <h4><i class="fas fa-file-medical"></i> Insurance Information</h4>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pInsuranceProvider">Insurance Provider</label>
+                            <input type="text" id="pInsuranceProvider" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="pPolicyNumber">Policy Number</label>
+                            <input type="text" id="pPolicyNumber" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="terms-group">
+                    <input type="checkbox" id="pTerms" required>
+                    <label for="pTerms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-user-plus"></i> Register as Patient
+                </button>
+            </form>
+
+            <!-- Doctor Registration Form -->
+            <form id="doctorForm" class="form-section doctor-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dFirstName">First Name</label>
+                        <input type="text" id="dFirstName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dLastName">Last Name</label>
+                        <input type="text" id="dLastName" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dEmail">Email Address</label>
+                    <input type="email" id="dEmail" class="form-control" required>
+                    <i class="fas fa-envelope input-icon"></i>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dPassword">Password</label>
+                        <input type="password" id="dPassword" class="form-control" required>
+                        <i class="fas fa-lock input-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="dConfirmPassword">Confirm Password</label>
+                        <input type="password" id="dConfirmPassword" class="form-control" required>
+                        <i class="fas fa-lock input-icon"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dPhone">Phone Number</label>
+                    <input type="tel" id="dPhone" class="form-control" required>
+                    <i class="fas fa-phone input-icon"></i>
+                </div>
+
+                <div class="specialization-group">
+                    <h4><i class="fas fa-stethoscope"></i> Professional Information</h4>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="dSpecialization">Specialization</label>
+                            <select id="dSpecialization" class="form-control" required>
+                                <option value="">Select Specialization</option>
+                                <option value="cardiology">Cardiology</option>
+                                <option value="neurology">Neurology</option>
+                                <option value="pediatrics">Pediatrics</option>
+                                <option value="orthopedics">Orthopedics</option>
+                                <option value="general">General Practice</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dLicense">Medical License Number</label>
+                            <input type="text" id="dLicense" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="dQualifications">Qualifications</label>
+                        <textarea id="dQualifications" class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="terms-group">
+                    <input type="checkbox" id="dTerms" required>
+                    <label for="dTerms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-user-md"></i> Register as Doctor
+                </button>
+            </form>
+
+            <!-- Admin Registration Form -->
+            <form id="adminForm" class="form-section admin-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="aFirstName">First Name</label>
+                        <input type="text" id="aFirstName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="aLastName">Last Name</label>
+                        <input type="text" id="aLastName" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="aEmail">Email Address</label>
+                    <input type="email" id="aEmail" class="form-control" required>
+                    <i class="fas fa-envelope input-icon"></i>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="aPassword">Password</label>
+                        <input type="password" id="aPassword" class="form-control" required>
+                        <i class="fas fa-lock input-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="aConfirmPassword">Confirm Password</label>
+                        <input type="password" id="aConfirmPassword" class="form-control" required>
+                        <i class="fas fa-lock input-icon"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="aPhone">Phone Number</label>
+                    <input type="tel" id="aPhone" class="form-control" required>
+                    <i class="fas fa-phone input-icon"></i>
+                </div>
+
+                <div class="admin-id-group">
+                    <h4><i class="fas fa-id-card"></i> Administrative Information</h4>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="aEmployeeId">Employee ID</label>
+                            <input type="text" id="aEmployeeId" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="aDepartment">Department</label>
+                            <select id="aDepartment" class="form-control" required>
+                                <option value="">Select Department</option>
+                                <option value="administration">Hospital Administration</option>
+                                <option value="hr">Human Resources</option>
+                                <option value="finance">Finance</option>
+                                <option value="it">Information Technology</option>
+                                <option value="operations">Operations</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="aPosition">Position</label>
+                        <input type="text" id="aPosition" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="terms-group">
+                    <input type="checkbox" id="aTerms" required>
+                    <label for="aTerms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-user-shield"></i> Register as Administrator
+                </button>
+            </form>
+
+            <div class="login-link">
+                Already have an account? <a href="login.html">Login here</a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

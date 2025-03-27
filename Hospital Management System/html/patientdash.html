@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hospital Management - Patient Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/patientdash.css" class="rel">
+    <script src="/script/patientdash.js"></script>
+
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="https://via.placeholder.com/40" alt="Patient Profile">
+            <span>John Doe</span>
+        </div>
+        
+        <div class="sidebar-menu">
+            <div class="menu-item active">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-file-medical"></i>
+                <span>Medical Records</span>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-calendar-plus"></i>
+                <span>Book Appointment</span>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <span>Bills & Payments</span>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <div class="header">
+            <h1><i class="fas fa-user-injured"></i> Patient Dashboard</h1>
+            <div class="user-profile">
+                <img src="https://via.placeholder.com/40" alt="Patient Profile">
+                <span>John Doe</span>
+            </div>
+        </div>
+        
+        <!-- Quick Info Cards -->
+        <div class="quick-info">
+            <div class="info-card">
+                <div class="info-icon icon-records">
+                    <i class="fas fa-file-medical"></i>
+                </div>
+                <div class="info-content">
+                    <h3>24</h3>
+                    <p>Medical Records</p>
+                </div>
+            </div>
+            
+            <div class="info-card">
+                <div class="info-icon icon-appointments">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <div class="info-content">
+                    <h3>3</h3>
+                    <p>Upcoming Appointments</p>
+                </div>
+            </div>
+            
+            <div class="info-card">
+                <div class="info-icon icon-bills">
+                    <i class="fas fa-receipt"></i>
+                </div>
+                <div class="info-content">
+                    <h3>$1,245</h3>
+                    <p>Total Bills</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Appointment Booking Section -->
+        <div class="dashboard-section">
+            <div class="section-header">
+                <h2 class="section-title">Book New Appointment</h2>
+            </div>
+            
+            <form class="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="appointment-type">Appointment Type</label>
+                        <select id="appointment-type" class="form-control" required>
+                            <option value="">Select Appointment Type</option>
+                            <option value="general">General Consultation</option>
+                            <option value="followup">Follow-up Visit</option>
+                            <option value="vaccination">Vaccination</option>
+                            <option value="test">Diagnostic Test</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="doctor">Select Doctor</label>
+                        <select id="doctor" class="form-control" required>
+                            <option value="">Select Doctor</option>
+                            <option value="dr-smith">Dr. Smith (Cardiology)</option>
+                            <option value="dr-johnson">Dr. Johnson (General Medicine)</option>
+                            <option value="dr-williams">Dr. Williams (Pediatrics)</option>
+                            <option value="dr-brown">Dr. Brown (Orthopedics)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="appointment-date">Date</label>
+                        <input type="date" id="appointment-date" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointment-time">Time</label>
+                        <select id="appointment-time" class="form-control" required>
+                            <option value="">Select Time Slot</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="appointment-reason">Reason for Appointment</label>
+                    <textarea id="appointment-reason" class="form-control" rows="3" placeholder="Briefly describe the reason for your appointment"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-calendar-check"></i> Book Appointment
+                </button>
+            </form>
+        </div>
+        
+        <!-- Previous Appointments Section -->
+        <div class="dashboard-section">
+            <div class="section-header">
+                <h2 class="section-title">Appointment History</h2>
+            </div>
+            
+            <ul class="appointments-list">
+                <li class="appointment-item">
+                    <div class="appointment-info">
+                        <h4>General Consultation</h4>
+                        <div class="appointment-meta">
+                            <span><i class="fas fa-user-md"></i> Dr. Smith</span>
+                            <span><i class="fas fa-calendar-alt"></i> 15 June 2023</span>
+                            <span><i class="fas fa-clock"></i> 10:00 AM</span>
+                        </div>
+                    </div>
+                    <span class="appointment-status status-completed">Completed</span>
+                </li>
+                <li class="appointment-item">
+                    <div class="appointment-info">
+                        <h4>Blood Test</h4>
+                        <div class="appointment-meta">
+                            <span><i class="fas fa-user-md"></i> Dr. Johnson</span>
+                            <span><i class="fas fa-calendar-alt"></i> 05 June 2023</span>
+                            <span><i class="fas fa-clock"></i> 02:30 PM</span>
+                        </div>
+                    </div>
+                    <span class="appointment-status status-completed">Completed</span>
+                </li>
+                <li class="appointment-item">
+                    <div class="appointment-info">
+                        <h4>Follow-up Visit</h4>
+                        <div class="appointment-meta">
+                            <span><i class="fas fa-user-md"></i> Dr. Williams</span>
+                            <span><i class="fas fa-calendar-alt"></i> 25 June 2023</span>
+                            <span><i class="fas fa-clock"></i> 11:15 AM</span>
+                        </div>
+                    </div>
+                    <span class="appointment-status status-upcoming">Upcoming</span>
+                </li>
+                <li class="appointment-item">
+                    <div class="appointment-info">
+                        <h4>Vaccination</h4>
+                        <div class="appointment-meta">
+                            <span><i class="fas fa-user-md"></i> Dr. Brown</span>
+                            <span><i class="fas fa-calendar-alt"></i> 12 May 2023</span>
+                            <span><i class="fas fa-clock"></i> 09:00 AM</span>
+                        </div>
+                    </div>
+                    <span class="appointment-status status-cancelled">Cancelled</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    
+</body>
+</html>

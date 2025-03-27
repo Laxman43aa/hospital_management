@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Hospital - Secure Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/login.css" >
+    <script src="/script/login.js"></script>
+</head>
+<body>
+    <!-- Floating medical icons in background -->
+    <i class="fas fa-heartbeat floating-med"></i>
+    <i class="fas fa-hospital floating-med"></i>
+    <i class="fas fa-stethoscope floating-med"></i>
+    <i class="fas fa-pills floating-med"></i>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="/html/index.html" class="logo">
+                <i class="fas fa-hospital"></i>MediCare Hospital
+            </a>
+            <ul class="nav-links">
+                <li><a href="/html/index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="#"><i class="fas fa-procedures"></i> Services</a></li>
+                <li><a href="#"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                <li><a href="/html/login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Scrollable Content Container -->
+    <div class="scroll-container">
+        <!-- Login Section -->
+        <section class="login-section">
+            <div class="login-box">
+                <div class="login-header">
+                    <h2>Secure Login</h2>
+                    <p>Access your medical portal with your credentials</p>
+                </div>
+                
+                <div class="error-message" id="errorMessage">
+                    <i class="fas fa-exclamation-circle"></i> Invalid credentials. Please try again.
+                </div>
+                
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Email or Username</label>
+                        <i class="fas fa-user input-icon"></i>
+                        <input type="text" id="username" class="form-control" placeholder="Enter your email or username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <i class="fas fa-lock input-icon"></i>
+                        <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="role-selector">
+                            <div class="role-option">
+                                <input type="radio" id="patient" name="role" value="patient" checked>
+                                <label for="patient">
+                                    <i class="fas fa-user-injured"></i>
+                                    Patient
+                                </label>
+                            </div>
+                            <div class="role-option">
+                                <input type="radio" id="doctor" name="role" value="doctor">
+                                <label for="doctor">
+                                    <i class="fas fa-user-md"></i>
+                                    Doctor
+                                </label>
+                            </div>
+                            <div class="role-option">
+                                <input type="radio" id="admin" name="role" value="admin">
+                                <label for="admin">
+                                    <i class="fas fa-user-shield"></i>
+                                    Admin
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </button>
+                    
+                    <div class="login-options">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+                        <div class="forgot-password">
+                            <a href="forgot-password.html">Forgot password?</a>
+                        </div>
+                    </div>
+                    
+                    <div class="register-section">
+                        <p class="register-text">New to MediCare Hospital?</p>
+                        <a href="register.html" class="register-btn">
+                            <i class="fas fa-user-plus"></i> Register Now
+                        </a>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="scroll-down" id="scrollDown">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- Additional Hospital Info -->
+        <section class="hospital-info" id="hospitalInfo">
+            <div class="info-container">
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>24/7 Emergency Services</h3>
+                    <p>Our emergency department is always staffed with expert medical professionals ready to handle any medical crisis at any time.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-procedures"></i>
+                    <h3>Advanced Facilities</h3>
+                    <p>State-of-the-art medical equipment and modern facilities to ensure the best possible care for our patients.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>Expert Medical Staff</h3>
+                    <p>Highly qualified doctors and nurses dedicated to providing compassionate and personalized healthcare services.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Medical Drive, Health City</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@medicarehospital.com</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> About Us</a>
+                    <a href="#"><i class="fas fa-procedures"></i> Services</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hospital Management. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
